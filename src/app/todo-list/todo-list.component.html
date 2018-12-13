@@ -1,0 +1,13 @@
+<table>
+    <tr>
+      <th>Label</th>
+      <th>Priority</th>
+      <th>Done</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+      <td>{{todo.label}}</td>
+      <td>{{todo.priority}}</td>
+      <td>{{todo.done ? '&#10003;' : '&#10005;'}}</td>
+      <td><button (click)="deleteTodo(todo)">X</button></td>
+    </tr>
+  </table>

@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<input type="text" #newTodo />
+<button (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
+<app-todo-list
+ [todos]=todos (delete)="deleteTodo($event)">
+</app-todo-list>
